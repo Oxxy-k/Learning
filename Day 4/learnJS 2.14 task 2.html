@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>learnJS</title>
+  </head>
+  <body>
+    <script>
+      /* Напишите функцию pow(x,n), которая возвращает x в степени n. Иначе говоря, умножает x на себя n раз и возвращает результат.
+      Создайте страницу, которая запрашивает x и n, а затем выводит результат pow(x,n)*/
+      let x = prompt("Введите целое число", 0);
+      let n = prompt("Введите степень числа", 0);
+      function pow(x, n) {
+        if (n == 0) {
+          return 1;
+        } else {
+          let res = x;
+          for (let i = 1; i < n; i++) {
+            res *= x;
+          }
+          return res;
+        }
+      }
+      alert(pow(x, n));
+    </script>
+  </body>
+</html>
