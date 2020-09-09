@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>learnJS</title>
+  </head>
+  <body>
+    <script>
+      /*Создайте объект calculator (калькулятор) с тремя методами:
+        1.read() (читать) запрашивает два значения и сохраняет их как свойства объекта.
+        2.sum() (суммировать) возвращает сумму сохранённых значений.
+        3.mul() (умножить) перемножает сохранённые значения и возвращает результат.*/
+
+      let calculator = {
+        read: function () {
+          this.valueOne = prompt("Введите первое число", 0);
+          this.valueTwo = prompt("Введите второе число", 0);
+        },
+        sum: function () {
+          return +this.valueOne + +this.valueTwo;
+        },
+        mul: function () {
+          return this.valueOne * this.valueTwo;
+        },
+      };
+      calculator.read();
+      alert(calculator.sum());
+      alert(calculator.mul());
+      console.log(calculator);
+    </script>
+  </body>
+</html>
