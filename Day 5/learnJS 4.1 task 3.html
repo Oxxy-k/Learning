@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>learnJS</title>
+  </head>
+  <body>
+    <script>
+      /*У нас есть объект, в котором хранятся зарплаты нашей команды
+        Напишите код для суммирования всех зарплат и сохраните результат в переменной sum.*/
+      let salaries = {
+        John: prompt("Введите зарплату Джона", 0),
+        Ann: prompt("Введите зарплату Энн", 0),
+        Pete: prompt("Введите зарплату Пита", 0),
+      };
+      let sum = 0;
+      for (let key in salaries) {
+        sum += +salaries[key];
+      }
+      alert(sum);
+    </script>
+  </body>
+</html>
