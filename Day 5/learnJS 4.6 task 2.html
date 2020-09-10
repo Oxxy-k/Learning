@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>learnJS</title>
+  </head>
+  <body>
+    <script>
+      /* Напишите функцию-конструктор Accumulator(startingValue).
+              Объект, который она создаёт, должен уметь следующее:
+               1. Хранить «текущее значение» в свойстве value. Начальное значение устанавливается в аргументе конструктора startingValue.
+               2. Метод read() использует prompt для получения числа и прибавляет его к свойству value.
+              Таким образом, свойство value является текущей суммой всего, что ввёл пользователь при вызовах метода read(), с учётом начального значения startingValue.*/
+
+      function Accumulator(startingValue) {
+        this.value = startingValue;
+        this.read = function () {
+          let count = +prompt("Введите число", 0);
+          this.value += count;
+        };
+      }
+
+      let accumulator = new Accumulator(1); // начальное значение 1
+      accumulator.read(); // прибавит ввод prompt к текущему значению
+      accumulator.read(); // прибавит ввод prompt к текущему значению
+      alert(accumulator.value);
+    </script>
+  </body>
+</html>
