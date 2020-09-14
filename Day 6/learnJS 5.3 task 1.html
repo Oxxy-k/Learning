@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>learnJS</title>
+  </head>
+  <body>
+    <script>
+      /*Напишите функцию ucFirst(str), возвращающую строку str с заглавным первым символом. */
+      let name = prompt("Введите слово с маленькой буквы", "");
+      function ucFirst(str) {
+        let strFirst = str[0].toUpperCase();
+        for (let i = 1; i < str.length; i++) {
+          strFirst += str[i];
+        }
+        return strFirst;
+      }
+      alert(ucFirst(name));
+    </script>
+  </body>
+</html>

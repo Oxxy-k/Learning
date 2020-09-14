@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>learnJS</title>
+  </head>
+  <body>
+    <script>
+      /*Есть стоимость в виде строки "$120". То есть сначала идёт знак валюты, а затем – число.
+        Создайте функцию extractCurrencyValue(str), которая будет из такой строки выделять числовое значение и возвращать его.*/
+      let cell = "$" + prompt("Введите цену", 0);
+      function extractCurrencyValuestr(str) {
+        return +str.slice(1, str.length);
+      }
+      alert(cell);
+      alert(extractCurrencyValuestr(cell));
+    </script>
+  </body>
+</html>
